@@ -112,13 +112,13 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-version]: https://img.shields.io/packagist/v/m1/twig-asset-rev-extension.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/Mm1/TwigAssetRevExtension/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/M1/TwigAssetRevExtension.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/m1/TwigAssetRevExtension/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/m1/TwigAssetRevExtension.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/m1/TwigAssetRevExtension.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/m1/twig-aset-rev-extension.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/m1/twig-asset-rev-extension
-[link-travis]: https://travis-ci.org/M1/TwigAssetRevExtension
+[link-travis]: https://travis-ci.org/m1/TwigAssetRevExtension
 [link-scrutinizer]: https://scrutinizer-ci.com/g/m1/TwigAssetRevExtension/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/m1/TwigAssetRevExtension
 [link-downloads]: https://packagist.org/packages/m1/TwigAssetRevExtension
