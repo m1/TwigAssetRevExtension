@@ -37,7 +37,7 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
         $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension($this->loadJson('rev-manifest.json')));
 
         foreach ($expected_assets as $raw_asset => $rev_asset) {
-            $this->assertEquals($twig->render($raw_asset), $rev_asset);
+            $this->assertEquals($rev_asset, $twig->render($raw_asset));
         }
     }
 
@@ -54,7 +54,7 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
         $twig = new \Twig_Environment($loader);
         $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension($assets));
 
-        $this->assertEquals($twig->render($file), $expected);
+        $this->assertEquals($expected, $twig->render($file));
     }
 
     public function testMinAsset()
@@ -74,7 +74,7 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
         $twig = new \Twig_Environment($loader);
         $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension($assets));
 
-        $this->assertEquals($twig->render($file), $expected);
+        $this->assertEquals($expected, $twig->render($file));
     }
 
     public function testOverrideMin()
@@ -117,7 +117,7 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
 
         $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension($assets));
 
-        $this->assertEquals($twig->render($file), $assets[$file]);
+        $this->assertEquals($assets[$file], $twig->render($file));
     }
 
     public function testNoExtension()
@@ -134,7 +134,7 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
         $twig = new \Twig_Environment($loader);
 
         $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension($assets));
-        $this->assertEquals($twig->render($file), $file);
+        $this->assertEquals($file, $twig->render($file));
     }
 
     public function testEmptyAssets()
@@ -151,7 +151,7 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
         $twig = new \Twig_Environment($loader);
 
         $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension(array()));
-        $this->assertEquals($twig->render($file), $file);
+        $this->assertEquals($file, $twig->render($file));
     }
 
     public function testNonExistentAsset()
@@ -170,6 +170,6 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
         $twig = new \Twig_Environment($loader);
 
         $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension($assets));
-        $this->assertEquals($twig->render($otherfile), $otherfile);
+        $this->assertEquals($otherfile, $twig->render($otherfile));
     }
 }
