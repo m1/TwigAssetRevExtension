@@ -8,8 +8,6 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Miles Croxford``` ```m1``` ```http://milescroxford.com``` ```hello@milescroxford.com``` ```M1``` ```TwigAssetRevExtension`` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line.
-
 Twig Asset Rev Extension adds a `asset_rev` twig filter so you can use asset revisioning from files, perfect for use 
 and tested with [`gulp-rev`](https://github.com/sindresorhus/gulp-rev)/[`gulp-rev-all`](https://github.com/smysnk/gulp-rev-all) 
 or [`grunt-rev`](https://github.com/cbas/grunt-rev)
@@ -112,15 +110,15 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-version]: https://img.shields.io/packagist/v/m1/twig-asset-rev-extension.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/M1/TwigAssetRevExtension/master.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/Mm1/TwigAssetRevExtension/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/M1/TwigAssetRevExtension.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/M1/TwigAssetRevExtension.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/M1/TwigAssetRevExtension.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/m1/TwigAssetRevExtension.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/m1/twig-aset-rev-extension.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/M1/twig-asset-rev-extension
+[link-packagist]: https://packagist.org/packages/m1/twig-asset-rev-extension
 [link-travis]: https://travis-ci.org/M1/TwigAssetRevExtension
-[link-scrutinizer]: https://scrutinizer-ci.com/g/M1/TwigAssetRevExtension/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/M1/TwigAssetRevExtension
-[link-downloads]: https://packagist.org/packages/M1/TwigAssetRevExtension
+[link-scrutinizer]: https://scrutinizer-ci.com/g/m1/TwigAssetRevExtension/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/m1/TwigAssetRevExtension
+[link-downloads]: https://packagist.org/packages/m1/TwigAssetRevExtension
 [link-author]: https://github.com/m1
 [link-contributors]: ../../contributors
