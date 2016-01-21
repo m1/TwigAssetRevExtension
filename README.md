@@ -52,7 +52,9 @@ $twig->addExtension($asset_rev);
 
 ## Setup
 
-####`TwigAssetRevExtension::__construct (array $assets [, bool $minified = true ] )`
+```php
+new TwigAssetRevExtension(array $assets [, bool $minified = true ] )
+```
 
 #### Parameters
 ##### assets
