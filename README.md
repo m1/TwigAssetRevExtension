@@ -121,6 +121,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-travis]: https://travis-ci.org/m1/TwigAssetRevExtension
 [link-scrutinizer]: https://scrutinizer-ci.com/g/m1/TwigAssetRevExtension/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/m1/TwigAssetRevExtension
-[link-downloads]: https://packagist.org/packages/m1/TwigAssetRevExtension
+[link-downloads]: https://packagist.org/packages/m1/twig-asset-rev-extension
 [link-author]: https://github.com/m1
 [link-contributors]: ../../contributors
