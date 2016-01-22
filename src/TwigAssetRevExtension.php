@@ -97,20 +97,19 @@ class TwigAssetRevExtension extends \Twig_Extension
      */
     public function minify($env, $pathinfo)
     {
-        if ($this->minified && !$env->isDebug() && in_array($pathinfo['extension'], self::$minify_exts)) {
-            $min = sprintf(
-                "%s/%s.min.%s",
-                $pathinfo['dirname'],
-                $pathinfo['filename'],
-                $pathinfo['extension']
-            );
+        $min = sprintf(
+            "%s/%s.min.%s",
+            $pathinfo['dirname'],
+            $pathinfo['filename'],
+            $pathinfo['extension']
+        );
 
-            if (isset($this->assets[$min])) {
-                return $this->assets[$min];
-            }
-        }
-
-        return false;
+        return (in_array($pathinfo['extension'], self::$minify_exts) &&
+                isset($this->assets[$min]) &&
+                $this->minified &&
+                !$env->isDebug()
+                )
+            ? $this->assets[$min] : false;
     }
     
     /**
