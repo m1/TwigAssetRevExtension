@@ -115,7 +115,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-travis]: https://img.shields.io/travis/m1/TwigAssetRevExtension/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/m1/TwigAssetRevExtension.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/m1/TwigAssetRevExtension.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/m1/twig-aset-rev-extension.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/m1/twig-asset-rev-extension.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/m1/twig-asset-rev-extension
 [link-travis]: https://travis-ci.org/m1/TwigAssetRevExtension
