@@ -41,6 +41,33 @@ class TwigAssetRevExtensionTest extends \PHPUnit_Framework_TestCase
         }
     }
 
+    public function testFileAsArgument()
+    {
+        $expected_assets = array(
+            "css/app.css" => "css/app.min.9f8d3d255c1f.css",
+            "js/app.admin.js" => "js/app.admin.min.dbdc6d8e2114.js",
+            "js/app.admin.plugins.js" => "js/app.admin.plugins.min.283a1a903f4a.js",
+            "img/image-jpg.jpg" => "img/image-jpg.219a48cfe072.jpg",
+            "img/image-png.png" => "img/image-png.1691620d298a.png",
+            "img/image-gif.gif" => "img/image-gif.bcd9f17c5cf8.png"
+        );
+
+        $loader_array = array();
+
+        foreach (array_keys($expected_assets) as $raw_asset) {
+            $loader_array[$raw_asset] = $this->makeAssetTwigString($raw_asset);
+        }
+
+        $loader = new \Twig_Loader_Array($loader_array);
+
+        $twig = new \Twig_Environment($loader);
+        $twig->addExtension(new \M1\TwigAssetRevExtension\TwigAssetRevExtension(__DIR__.'/stub/rev-manifest.json'));
+
+        foreach ($expected_assets as $raw_asset => $rev_asset) {
+            $this->assertEquals($rev_asset, $twig->render($raw_asset));
+        }
+    }
+
     public function testNoMinAsset()
     {
         $file = 'css/app.css';

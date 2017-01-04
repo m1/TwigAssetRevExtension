@@ -50,15 +50,29 @@ $twig->addExtension($asset_rev);
 }
 ```
 
+## Symfony usage
+
+You can register the extension automatically in Symfony via `app/config/services.yml`.
+
+``` yml
+twig.extension.asset_rev:
+  class: M1\TwigAssetRevExtension\TwigAssetRevExtension
+  arguments: [ "%kernel.root_dir%/../web/js/manifest.json", false ]
+  tags:
+    - { name: twig.extension }
+```
+
 ## Setup
 
 ```php
-new TwigAssetRevExtension(array $assets [, bool $minified = true ] )
+new TwigAssetRevExtension(mixed $assets [, bool $minified = true ] )
 ```
 
 #### Parameters
+
 ##### assets
-The array of assets and rev'd assets, an example:
+
+The path to the JSON file, or the array of assets and rev'd assets, an example:
 
 ```php
 array(
