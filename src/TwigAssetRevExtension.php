@@ -49,11 +49,17 @@ class TwigAssetRevExtension extends \Twig_Extension
     /**
      * The TwigAssetRevExtension constructor
      *
-     * @param array $assets   The array of assets and rev'd assets
+     * @param mixed $assets   The array of assets and rev'd assets
      * @param bool  $minified Whether to search for minified rev'd assets
      */
-    public function __construct(array $assets, $minified = true)
+    public function __construct($assets, $minified = true)
     {
+        if (!is_array($assets)) {
+            if (is_file($assets)) {
+                $assets = json_decode(file_get_contents($assets), true);
+            }
+        }
+
         $this->assets = $assets;
         $this->minified = $minified;
     }
@@ -111,7 +117,7 @@ class TwigAssetRevExtension extends \Twig_Extension
                 )
             ? $this->assets[$min] : false;
     }
-    
+
     /**
      * Returns the name of the extension.
      *
