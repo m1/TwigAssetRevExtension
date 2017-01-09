@@ -30,12 +30,12 @@ class TwigAssetRevExtension extends \Twig_Extension
      *
      * @var array
      */
-    private static $minify_exts = array('css', 'js');
+    private static $minify_exts = ['css', 'js'];
 
     /**
      * The array of assets rev, raw_asset => rev_asset
      *
-     * @var array
+     * @var mixed
      */
     private $assets;
 
@@ -54,13 +54,11 @@ class TwigAssetRevExtension extends \Twig_Extension
      */
     public function __construct($assets, $minified = true)
     {
-        if (!is_array($assets)) {
-            if (is_file($assets)) {
-                $assets = json_decode(file_get_contents($assets), true);
-            }
+        if (!is_array($assets) && is_file($assets)) {
+            $assets = json_decode(file_get_contents($assets), true);
         }
 
-        $this->assets = $assets;
+        $this->assets   = (is_array($assets)) ? $assets : array($assets);
         $this->minified = $minified;
     }
 
@@ -69,9 +67,9 @@ class TwigAssetRevExtension extends \Twig_Extension
      */
     public function getFilters()
     {
-        return array(
+        return [
             new \Twig_SimpleFilter('asset_rev', array($this, 'assetRev'), array('needs_environment' => true)),
-        );
+        ];
     }
 
     /**
@@ -111,10 +109,10 @@ class TwigAssetRevExtension extends \Twig_Extension
         );
 
         return (in_array($pathinfo['extension'], self::$minify_exts) &&
-                isset($this->assets[$min]) &&
-                $this->minified &&
-                !$env->isDebug()
-                )
+            isset($this->assets[$min]) &&
+            $this->minified &&
+            !$env->isDebug()
+        )
             ? $this->assets[$min] : false;
     }
 
