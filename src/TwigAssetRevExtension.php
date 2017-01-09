@@ -67,9 +67,9 @@ class TwigAssetRevExtension extends \Twig_Extension
      */
     public function getFilters()
     {
-        return [
+        return array(
             new \Twig_SimpleFilter('asset_rev', array($this, 'assetRev'), array('needs_environment' => true)),
-        ];
+        );
     }
 
     /**
