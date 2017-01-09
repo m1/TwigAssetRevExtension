@@ -30,7 +30,7 @@ class TwigAssetRevExtension extends \Twig_Extension
      *
      * @var array
      */
-    private static $minify_exts = ['css', 'js'];
+    private static $minify_exts = array('css', 'js');
 
     /**
      * The array of assets rev, raw_asset => rev_asset

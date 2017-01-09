@@ -4,6 +4,11 @@ All Notable changes to `TwigAssetRevExtension` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 1.1.1 - 2017-01-09
+
+### Fixes
+- Fix travis build
+
 ## 1.1.0 - 2017-01-09
 
 ### Added
